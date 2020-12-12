@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Spring Framework Guru - Course Name</title>
 
-    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
     <style>
-        .jumbotron {
-            background: url('https://d2vvqscadf4c1f.cloudfront.net/rGIBmJUAT46UuLPwXo3K_Fedora_Core_Ultimate2.jpg') no-repeat center center;
-            height: 350px;
-            color: white;
-            text-shadow: #444 0 1px 1px;
-        }
 
         body {
             color: #2b3636;
-            font-family: "Proxima";
+            font-family: "Proxima",serif;
         }
 
         body {
@@ -129,7 +128,7 @@
 </head>
 <body>
 
-<div class="jumbotron">
+<div class="jumbotron" th:replace="fragments/jumbotron :: jumbotron">
     <div class="container">
         <h1>Spring Framework Guru</h1>
         <p class="lead">Online Courses for Spring Framework</p>
@@ -146,7 +145,7 @@
         <div class="col-md-6">
 
                 <img src="https://d2vvqscadf4c1f.cloudfront.net/scgeIJ9wRGGNWvK0jAld_ThumbFREE_01.png"
-                     class="center-block">
+                     class="center-block" alt=""/>
 
         </div>
         <div class="col-md-6">
@@ -167,7 +166,7 @@
 
     <div class="row">
         <div class="col-md-offset-6 col-md-4">
-            <button class="btn-success">Buy Now!</button>
+            <button class="btn-success" th:text="#{button.buy.now}">Buy Now!</button>
         </div>
     </div>
 </div>
